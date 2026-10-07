@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Welcome - Secure Password Storage</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="floating lock">🔐</div>
+<div class="floating shield">🛡️</div>
+<div class="floating key">🔑</div>
+<div class="floating secure">🔒</div>
+
+
+<div class="welcome-card">
+
+    <div class="welcome-icon">
+        🎉
+    </div>
+
+
+    <h1>
+        Welcome, {{ username }}!
+    </h1>
+
+
+    <p>
+        You have logged in successfully.
+    </p>
+
+
+    <div class="security-box">
+
+        <div>
+            🔐
+        </div>
+
+        <span>
+            Your password is securely protected
+            using SHA-256 hashing and random salt.
+        </span>
+
+    </div>
+
+
+    <a href="/logout">
+
+        <button class="logout-button">
+            Logout
+        </button>
+
+    </a>
+
+</div>
+
+</body>
+
+</html>
