@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Register - Secure Password Storage</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
 
 <div class="auth-card">
 
-    <div class="auth-icon">🔐</div>
+    <div class="auth-icon">
+        🔐
+    </div>
 
-    <h1>Create Secure Account</h1>
+    <h1>
+        Create Secure Account
+    </h1>
 
     <p class="auth-subtitle">
         Create an account with protected password storage
     </p>
 
+
     <form method="POST">
 
-        <input type="text"
-               name="username"
-               placeholder="Enter username"
-               required>
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            required
+        >
 
-        <input type="password"
-               name="password"
-               placeholder="Enter password"
-               required>
 
-        <button type="submit" class="auth-button">
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            required
+        >
+
+
+        <button
+            type="submit"
+            class="auth-button"
+        >
             🔒 Register
         </button>
 
     </form>
 
-    <p class="message">{{ message }}</p>
 
-    <a href="/" class="back-link">← Back to Home</a>
+    {% if message %}
+
+    <p class="error-message">
+        {{ message }}
+    </p>
+
+    {% endif %}
+
+
+    <a href="/" class="back-link">
+        ← Back to Home
+    </a>
 
 </div>
 
 </body>
+
 </html>
