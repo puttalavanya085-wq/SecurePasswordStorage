@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Secure Password Storage System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Secure Password Storage</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
@@ -18,55 +23,84 @@
         🔐
     </div>
 
-    <h1>Secure Password<br>Storage System</h1>
+    <h1>
+        Secure Password<br>
+        Storage System
+    </h1>
 
     <p class="subtitle">
         Protect your passwords with modern cryptographic techniques
     </p>
 
+    {% if message %}
+
+    <p class="success-message">
+        {{ message }}
+    </p>
+
+    {% endif %}
+
     <div class="features">
 
         <div class="feature">
+
             <span>🛡️</span>
+
             <div>
                 <b>SHA-256</b>
                 <small>Secure Hashing</small>
             </div>
+
         </div>
 
+
         <div class="feature">
+
             <span>🎲</span>
+
             <div>
                 <b>Random Salt</b>
                 <small>Extra Protection</small>
             </div>
+
         </div>
 
+
         <div class="feature">
+
             <span>🔒</span>
+
             <div>
                 <b>Safe Storage</b>
                 <small>Protected Credentials</small>
             </div>
+
         </div>
 
     </div>
 
+
     <div class="buttons">
 
         <a href="/register">
+
             <button class="register-btn">
                 Create Account
             </button>
+
         </a>
 
+
         <a href="/login">
+
             <button class="login-btn">
                 Login
             </button>
+
         </a>
 
     </div>
+
 
     <p class="bottom-text">
         Your password is never stored in plain text.
@@ -75,4 +109,5 @@
 </div>
 
 </body>
+
 </html>
